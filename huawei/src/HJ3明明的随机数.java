@@ -47,11 +47,13 @@ public class HJ3明明的随机数 {
         {
 
             //是以数组角标代表的输入的数字，因为输入的数字最大值是1000，所以数组的长度要是1001
+            //这里可以写为501，因为最大的数会到501
             boolean[] stu=new boolean[1001];
             StringBuilder sb=new StringBuilder();
             int n=Integer.parseInt(str);
             for(int i=0;i<n;i++)
                 stu[Integer.parseInt(bf.readLine())]=true;
+            //如果上面改为501，这里也要改成501
             for(int i=0;i<1001;i++)
                 if(stu[i])
                     sb.append(i).append("\n");
