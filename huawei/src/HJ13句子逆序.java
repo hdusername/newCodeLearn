@@ -44,7 +44,7 @@ public class HJ13句子逆序 {
         while ((str = br.readLine()) != null) {
             char[] chars = (str + " ").toCharArray();
             int len = str.length();
-            // 碰到空格就将当前
+
             int first = 0;
             int last = len;
             char[] newchar = new char[len];
@@ -64,7 +64,7 @@ public class HJ13句子逆序 {
                     System.arraycopy(chars, first, newchar, despos, _len);
                     //进入这个分支 j位置肯定是空格，+1就是从空格后的下一个字母开始截
                     first = j + 1;
-                    len = len - _len - 1;
+                    len = len - _len - 1;//-1是把空格减去
                     last = len;
                     // copy完成后，指针变动后，赋值空
                     if (last > 0) {

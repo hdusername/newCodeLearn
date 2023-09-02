@@ -25,6 +25,7 @@ import java.io.InputStream;
 public class HJ11数字颠倒 {
     public static void main(String[] args) throws IOException {
         InputStream is = System.in;
+        //去除行尾的换行
         int available = is.available() - 1;
         char[] arr = new char[available];
         while (available-- > 0) {

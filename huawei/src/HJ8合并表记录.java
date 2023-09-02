@@ -33,13 +33,13 @@ public class HJ8合并表记录 {
 
     public static void main(String[] args) throws IOException {
         StreamTokenizer st = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
-        st.nextToken();      // 分隔符
-        int n = (int) st.nval;   // 强转
+        st.nextToken();      //下一个标识是什么
+        int n = (int) st.nval;   // 取出下一个标识（数字、单词、符号等）
         int[] arr = new int[n];
 
         for (int i = 0; i < n; i++) {
             st.nextToken();
-            int key = (int) st.nval;
+            int key = (int) st.nval;//主要用于获取流中的数值标记的数值值，而不是用于提取空格或其他非数值字符。它在解析输入流时不会取出空格
             st.nextToken();
             int value = (int) st.nval;
             arr[key] = arr[key] + value;
