@@ -20,6 +20,8 @@ import java.io.InputStreamReader;
 public class HJ6质数因子 {
 
     public static void main(String[] args) throws IOException {
+        //设 n 为一个合数，而 p 是它的最小的质因子，其中 p 不等于 1。那么 n = a * p，其中 a 可能是一个质数或合数。
+        //如果 p 大于 n 的平方根，因为p是最小的质因子，那么 a 也必然大于 n 的平方根，那么a*p肯定大于n所以是不对的，找质因子只从2-n的平方根之间搜索即可
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
         String str;
         while ((str = br.readLine()) != null) {
@@ -31,6 +33,7 @@ public class HJ6质数因子 {
                     sb.append(i).append(" ");
                     num = num / i;
                     //这里是为了判断相同的质因数会不会是num的质因子
+                    //
                     i--;
                 }
             }
